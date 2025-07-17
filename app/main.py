@@ -1,6 +1,7 @@
 from fastapi import FastAPI, Request
 import os
 from dotenv import load_dotenv
+from app.jira_handler import parse_jira_payload
 
 load_dotenv()
 app = FastAPI()
@@ -12,5 +13,6 @@ async def health():
 @app.post("/webhook")
 async def webhook(request: Request):
     payload = await request.json()
-    print(payload)  # log the story data
-    return {"received": True}
+    story = parse_jira_payload(payload)
+    print("📌 Parsed Story:", story)
+    return {"received": True, "story": story}
