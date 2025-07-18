@@ -1,18 +1,29 @@
 from fastapi import FastAPI, Request
-import os
-from dotenv import load_dotenv
 from app.jira_handler import parse_jira_payload
+from app.generator import generate_code
 
-load_dotenv()
 app = FastAPI()
 
+
 @app.get("/health")
-async def health():
+def health_check():
     return {"status": "ok"}
 
+
 @app.post("/webhook")
-async def webhook(request: Request):
+async def jira_webhook(request: Request):
     payload = await request.json()
     story = parse_jira_payload(payload)
-    print("📌 Parsed Story:", story)
-    return {"received": True, "story": story}
+
+    print(f"📌 Parsed Story: {story}")
+
+    # Call the code generator
+    generated_code = generate_code(story)
+
+    print(f"🧾 Generated Code:\n{generated_code}")
+
+    return {
+        "received": True,
+        "story": story,
+        "generated_code": generated_code,
+    }
