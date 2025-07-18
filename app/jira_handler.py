@@ -1,16 +1,24 @@
-def parse_jira_payload(payload: dict) -> dict:
-    """
-    Parse incoming Jira webhook payload and extract story details.
-    """
-    issue = payload.get("issue", {})
-    fields = issue.get("fields", {})
+from pydantic import BaseModel
+from app.generator import generate_code
 
-    story = {
-        "key": issue.get("key"),
-        "summary": fields.get("summary"),
-        "description": fields.get("description"),
-        "issuetype": fields.get("issuetype", {}).get("name"),
-        "status": fields.get("status", {}).get("name"),
-        "reporter": fields.get("reporter", {}).get("displayName"),
-    }
+class JiraStory(BaseModel):
+    key: str
+    summary: str
+    description: str | None = None
+
+def parse_story(payload: dict) -> JiraStory:
+    fields = payload.get("issue", {}).get("fields", {})
+    story = JiraStory(
+        key=payload.get("issue", {}).get("key", ""),
+        summary=fields.get("summary", ""),
+        description=fields.get("description", ""),
+    )
     return story
+
+def parse_and_generate_code(payload: dict) -> tuple[JiraStory, str]:
+    """
+    Parses the payload and immediately generates code from the parsed story.
+    """
+    story = parse_story(payload)
+    code = generate_code(story)
+    return story.dict(), code

@@ -1,18 +1,10 @@
-def generate_code(story: dict) -> str:
-    """
-    Generate starter code based on the Jira story details.
-    For now, this is a mock implementation.
-    """
-    summary = story.get("summary", "No summary")
-    description = story.get("description", "")
+def generate_code(story) -> str:
+    summary = story.summary or "No summary"
+    description = story.description or "No description"
 
-    # TODO: Replace this with real StarCoder integration
-    generated_code = f"""\
-# Task: {summary}
-# Description: {description}
+    code = f"# Generated code based on story: {summary}\n"
+    code += f"# Description: {description}\n\n"
+    code += "def generated_function():\n"
+    code += "    pass  # TODO: Implement"
 
-def main():
-    print("Hello from generated code for: {summary}")
-"""
-
-    return generated_code
+    return code

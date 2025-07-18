@@ -1,6 +1,5 @@
 from fastapi import FastAPI, Request
-from app.jira_handler import parse_jira_payload
-from app.generator import generate_code
+from app.jira_handler import parse_and_generate_code
 
 app = FastAPI()
 
@@ -13,13 +12,11 @@ def health_check():
 @app.post("/webhook")
 async def jira_webhook(request: Request):
     payload = await request.json()
-    story = parse_jira_payload(payload)
+
+    # Parse and generate code in one step
+    story, generated_code = parse_and_generate_code(payload)
 
     print(f"📌 Parsed Story: {story}")
-
-    # Call the code generator
-    generated_code = generate_code(story)
-
     print(f"🧾 Generated Code:\n{generated_code}")
 
     return {
