@@ -27,12 +27,12 @@ All of this happens in seconds, not minutes. Zero manual intervention required.
 
 | Feature | Status | Description |
 |---------|--------|-------------|
-| **Jira Webhook Integration** | ✅ Complete | Receives and processes Jira story webhooks in real-time |
-| **Story Parsing** | ✅ Complete | Extracts story key, summary, description, and metadata |
-| **AI Code Generation** | ✅ Basic | Generates Python starter code based on story context |
-| **Git Automation** | ✅ Complete | Handles branch creation, commits, and remote pushes |
-| **GitHub PR Creation** | ✅ Complete | Automatically opens PRs with story information |
-| **Error Handling** | ✅ Robust | Comprehensive error handling and logging |
+| **Jira Webhook Integration** |  Complete | Receives and processes Jira story webhooks in real-time |
+| **Story Parsing** |  Complete | Extracts story key, summary, description, and metadata |
+| **AI Code Generation** |  Basic | Generates Python starter code based on story context |
+| **Git Automation** |  Complete | Handles branch creation, commits, and remote pushes |
+| **GitHub PR Creation** |  Complete | Automatically opens PRs with story information |
+| **Error Handling** |  Robust | Comprehensive error handling and logging |
 
 ---
 
@@ -213,7 +213,7 @@ We love contributions! Whether it's bug fixes, feature additions, or documentati
 
 - ** Bug Reports**: [Open an Issue](https://github.com/SUSHIL-0711/JiraGenie/issues)
 - ** Questions**: [Start a Discussion](https://github.com/SUSHIL-0711/JiraGenie/discussions)
-- ** Direct Contact**: [Email Us](mailto:your-email@example.com)
+- ** Direct Contact**: [Email Us](mailto:shettysushil0711@gmail.com)
 
 ---
 
@@ -242,4 +242,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-> ** Active Development Notice**: JiraGenie is rapidly evolving. Star the repo to stay updated with new features, AWS deployment, and the upcoming web dashboard!
+> Active Development Notice: JiraGenie is rapidly evolving. Star the repo to stay updated with new features, AWS deployment, and the upcoming web dashboard!
