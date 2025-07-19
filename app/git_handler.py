@@ -37,7 +37,7 @@ def commit_all_changes(commit_message: str) -> None:
 
 
 def push_branch(branch_name: str) -> None:
-    run_git_command(["git", "push", "-u", "origin", branch_name])
+    run_git_command(["git", "push", "-u", "origin", branch_name, "--force"])
 
 
 def create_pull_request(branch_name: str, title: str, body: str) -> str:
