@@ -1,7 +1,8 @@
 import subprocess
 import os
 
-REPO_PATH = os.getcwd()
+REPO_PATH = os.getcwd()  # assumes script runs inside repo
+GH_CLI = r"C:\Program Files\GitHub CLI\gh.exe"  # full path to gh.exe
 
 def run_git_command(command: list[str]) -> str:
     result = subprocess.run(
@@ -32,13 +33,8 @@ def create_branch(branch_name: str):
 
 
 def commit_all_changes(commit_message: str) -> None:
-    status = run_git_command(["git", "status", "--porcelain"])
-    if not status.strip():
-        print("ℹ️ No changes to commit.")
-        return
     run_git_command(["git", "add", "."])
     run_git_command(["git", "commit", "-m", commit_message])
-
 
 
 def push_branch(branch_name: str) -> None:
@@ -47,7 +43,7 @@ def push_branch(branch_name: str) -> None:
 
 def create_pull_request(branch_name: str, title: str, body: str) -> str:
     result = subprocess.run(
-        ["gh", "pr", "create", "--head", branch_name, "--title", title, "--body", body],
+        [GH_CLI, "pr", "create", "--head", branch_name, "--title", title, "--body", body],
         cwd=REPO_PATH,
         capture_output=True,
         text=True
