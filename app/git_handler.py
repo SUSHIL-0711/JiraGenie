@@ -1,7 +1,7 @@
 import subprocess
 import os
 
-REPO_PATH = os.getcwd()  # assumes script runs inside repo
+REPO_PATH = os.getcwd()
 
 def run_git_command(command: list[str]) -> str:
     result = subprocess.run(
