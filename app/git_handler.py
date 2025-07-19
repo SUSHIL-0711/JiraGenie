@@ -32,8 +32,13 @@ def create_branch(branch_name: str):
 
 
 def commit_all_changes(commit_message: str) -> None:
+    status = run_git_command(["git", "status", "--porcelain"])
+    if not status.strip():
+        print("ℹ️ No changes to commit.")
+        return
     run_git_command(["git", "add", "."])
     run_git_command(["git", "commit", "-m", commit_message])
+
 
 
 def push_branch(branch_name: str) -> None:
