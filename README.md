@@ -1,4 +1,4 @@
-# 🧞‍♂️ JiraGenie
+#  JiraGenie
 
 > **AI-Powered Development Automation That Actually Works**
 
@@ -9,21 +9,21 @@
 
 **JiraGenie** is an intelligent automation bot that bridges the gap between project management and development. It seamlessly connects Jira, GitHub, and AI code generation to eliminate the tedious setup work that developers face with every new story.
 
-## ✨ What Makes JiraGenie Special?
+##  What Makes JiraGenie Special?
 
 Imagine never having to manually create branches, write boilerplate code, or set up PRs again. JiraGenie listens to your Jira webhooks and automatically:
 
-- 🎯 **Captures** story details from Jira webhooks
-- 🤖 **Generates** intelligent starter code based on story requirements
-- 🌿 **Creates** properly named Git branches
-- 📝 **Commits** and pushes code with meaningful messages
-- 🔄 **Opens** Pull Requests with complete story context
+-  **Captures** story details from Jira webhooks
+-  **Generates** intelligent starter code based on story requirements
+-  **Creates** properly named Git branches
+-  **Commits** and pushes code with meaningful messages
+-  **Opens** Pull Requests with complete story context
 
 All of this happens in seconds, not minutes. Zero manual intervention required.
 
 ---
 
-## 🚀 Current Capabilities
+##  Current Capabilities
 
 | Feature | Status | Description |
 |---------|--------|-------------|
@@ -36,7 +36,7 @@ All of this happens in seconds, not minutes. Zero manual intervention required.
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 <div align="center">
 
@@ -50,20 +50,20 @@ All of this happens in seconds, not minutes. Zero manual intervention required.
 
 ---
 
-## 🎯 Roadmap & Next Steps
+##  Roadmap & Next Steps
 
-### 🔥 Phase 1: Enhanced AI Integration
+###  Phase 1: Enhanced AI Integration
 - [ ] **StarCoder Integration** - Leverage HuggingFace's StarCoder for contextual, multi-language code generation
 - [ ] **Smart Code Templates** - Context-aware templates based on story type (feature, bug, epic)
 - [ ] **Code Quality Analysis** - Automated code review and suggestions
 
-### 🌐 Phase 2: Web Platform
+###  Phase 2: Web Platform
 - [ ] **React Dashboard** - Beautiful, intuitive web interface for managing projects
 - [ ] **User Authentication** - Secure sign-up/login system
 - [ ] **Team Management** - Multi-user support with role-based permissions
 - [ ] **Analytics Dashboard** - Track automation metrics and team productivity
 
-### ☁️ Phase 3: Cloud & Scale
+###  Phase 3: Cloud & Scale
 - [ ] **AWS Deployment** - Serverless architecture for 24/7 availability
 - [ ] **Multi-Repository Support** - Handle multiple projects from one dashboard
 - [ ] **Slack/Teams Integration** - Real-time notifications and status updates
@@ -71,7 +71,7 @@ All of this happens in seconds, not minutes. Zero manual intervention required.
 
 ---
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### Prerequisites
 
@@ -152,41 +152,45 @@ curl -X POST http://127.0.0.1:8000/webhook \
 
 ---
 
-## 📊 Performance Metrics
+##  Performance Metrics
 
-- **⚡ Processing Time**: < 3 seconds from webhook to PR creation
-- **🎯 Success Rate**: 99.2% webhook processing accuracy
-- **🔄 Automation Level**: 100% hands-off after initial setup
-- **💾 Resource Usage**: Minimal memory footprint (~50MB)
-
----
-
-## 🏗️ Architecture
-
-```
-┌─────────────┐    ┌─────────────┐    ┌─────────────┐
-│    Jira     │───▶│  JiraGenie  │───▶│   GitHub    │
-│  Webhook    │    │   Server    │    │Repository   │
-└─────────────┘    └─────────────┘    └─────────────┘
-                           │
-                           ▼
-                   ┌─────────────┐
-                   │ AI Code Gen │
-                   │ (StarCoder) │
-                   └─────────────┘
-```
+- ** Processing Time**: < 3 seconds from webhook to PR creation
+- ** Success Rate**: 99.2% webhook processing accuracy
+- ** Automation Level**: 100% hands-off after initial setup
+- ** Resource Usage**: Minimal memory footprint (~50MB)
 
 ---
 
-## 🤝 Contributing
+##  Architecture
+
+```
+┌────────────────────┐     ┌──────────────────────┐      ┌────────────────────┐
+│   Jira Webhook     │ ──▶ │   JiraGenie Server   │ ──▶ │      GitHub        │
+│  (Story Created)   │     │ - FastAPI Backend    │      │ - Auto PR Creation │
+│  (POST / Webhook)  │     │ - Webhook Parser     │      │ - User Auth        │
+└────────────────────┘     │ - Story Processor    │      │ - Team Mgmt        │
+                           └─────────┬────────────┘      └────────────────────┘
+                                     │
+                                     ▼
+                        ┌────────────────────────────┐
+                        │     AI Code Generation     │
+                        │   - Python Generator       │
+                        │   - File Generator         │
+                        │   - StarCoder Integration  │
+                        └────────────────────────────┘
+```
+
+---
+
+##  Contributing
 
 We love contributions! Whether it's bug fixes, feature additions, or documentation improvements.
 
 ### Ways to Contribute:
-- 🐛 **Report Bugs** - Found an issue? Let us know!
-- 💡 **Suggest Features** - Have ideas? We want to hear them!
-- 🔧 **Submit PRs** - Code contributions are always welcome!
-- 📖 **Improve Docs** - Help make our documentation better!
+-  **Report Bugs** - Found an issue? Let us know!
+-  **Suggest Features** - Have ideas? We want to hear them!
+-  **Submit PRs** - Code contributions are always welcome!
+-  **Improve Docs** - Help make our documentation better!
 
 ### Getting Started:
 1. Fork the repository
@@ -197,7 +201,7 @@ We love contributions! Whether it's bug fixes, feature additions, or documentati
 
 ---
 
-## 📬 Support & Community
+##  Support & Community
 
 <div align="center">
 
@@ -207,19 +211,19 @@ We love contributions! Whether it's bug fixes, feature additions, or documentati
 
 </div>
 
-- **🐛 Bug Reports**: [Open an Issue](https://github.com/SUSHIL-0711/JiraGenie/issues)
-- **💬 Questions**: [Start a Discussion](https://github.com/SUSHIL-0711/JiraGenie/discussions)
-- **📧 Direct Contact**: [Email Us](mailto:your-email@example.com)
+- ** Bug Reports**: [Open an Issue](https://github.com/SUSHIL-0711/JiraGenie/issues)
+- ** Questions**: [Start a Discussion](https://github.com/SUSHIL-0711/JiraGenie/discussions)
+- ** Direct Contact**: [Email Us](mailto:your-email@example.com)
 
 ---
 
-## 📄 License
+##  License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - **HuggingFace** for the incredible StarCoder model
 - **FastAPI** team for the amazing framework
@@ -230,7 +234,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 <div align="center">
 
-**⭐ If JiraGenie helps your team, consider giving it a star! ⭐**
+** If JiraGenie helps your team, consider giving it a star! **
 
 [⬆ Back to top](#-jiragenie)
 
@@ -238,4 +242,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-> **🚧 Active Development Notice**: JiraGenie is rapidly evolving. Star the repo to stay updated with new features, AWS deployment, and the upcoming web dashboard!
+> ** Active Development Notice**: JiraGenie is rapidly evolving. Star the repo to stay updated with new features, AWS deployment, and the upcoming web dashboard!
