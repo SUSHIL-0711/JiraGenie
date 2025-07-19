@@ -1,3 +1,5 @@
+from dotenv import load_dotenv
+load_dotenv()
 from fastapi import FastAPI, Request
 from app.jira_handler import parse_and_generate_code
 from app.git_handler import (
