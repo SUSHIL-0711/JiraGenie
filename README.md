@@ -53,7 +53,7 @@ All of this happens in seconds, not minutes. Zero manual intervention required.
 ##  Roadmap & Next Steps
 
 ###  Phase 1: Enhanced AI Integration
-- [ ] **StarCoder Integration** - Leverage HuggingFace's StarCoder for contextual, multi-language code generation
+- [ ] **CodeGen-350-mono model Integration** - Leverage HuggingFace's CodeGen-350-mono model for contextual, multi-language code generation
 - [ ] **Smart Code Templates** - Context-aware templates based on story type (feature, bug, epic)
 - [ ] **Code Quality Analysis** - Automated code review and suggestions
 
@@ -154,10 +154,10 @@ curl -X POST http://127.0.0.1:8000/webhook \
 
 ##  Performance Metrics
 
-- ** Processing Time**: < 3 seconds from webhook to PR creation
-- ** Success Rate**: 99.2% webhook processing accuracy
-- ** Automation Level**: 100% hands-off after initial setup
-- ** Resource Usage**: Minimal memory footprint (~50MB)
+- **Processing Time**: < 3 seconds from webhook to PR creation
+- **Success Rate**: 99.2% webhook processing accuracy
+- **Automation Level**: 100% hands-off after initial setup
+- **Resource Usage**: Minimal memory footprint (~50MB)
 
 ---
 
